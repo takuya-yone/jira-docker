@@ -1,0 +1,12 @@
+version: '3'
+
+volumes:
+    jiraVolume:
+
+services:
+    jira-service:
+        image: atlassian/jira-servicemanagement
+        ports:
+            - 8080:8080
+        volumes:
+            - jiraVolume:/var/atlassian/application-data/jira
